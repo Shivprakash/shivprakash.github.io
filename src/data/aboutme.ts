@@ -23,9 +23,9 @@ export const aboutMe: AboutMe = {
     institution: "Georgia Tech",
     description:
         "Shiv Prakash is a seasoned, results-oriented Engineering Leader, a hands-on Senior Architect and Technologist with a" +
-        "proven track record of building and leading high-performance teams to deliver critical, advanced, innovative," +
-        "precise scalable solutions for large-scale businesses. Led and involved in 10 successful Walmart US Holiday sales." +
-        "Delivered and owned Tier-0 and Tier-1 systems in backend, Data and MLOps, Data Stores and Platforms for time" +
+        "proven track record of building and leading high-performance teams to deliver critical, advanced, innovative, " +
+        "precise scalable solutions for large-scale businesses. He led and was responsible for 10 successful Walmart US Holiday sales." +
+        "He has delivered and owned Tier-0 and Tier-1 systems in backend, Data and MLOps, Data Stores and Platforms for time " +
         "sensitive high impact businesses and requirements.",
     email: "shivprakash@duck.com",
     imageUrl: "https://avatars.githubusercontent.com/u/2737066?v=4",
