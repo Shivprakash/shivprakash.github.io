@@ -84,7 +84,7 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
                 size={12}
                 className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
               />
-              <span className="tracking-wider uppercase">Resume</span>
+              <span className="tracking-wider uppercase">CV</span>
             </a>
           )}
         </div>

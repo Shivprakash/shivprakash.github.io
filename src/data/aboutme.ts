@@ -27,12 +27,12 @@ export const aboutMe: AboutMe = {
         "precise scalable solutions for large-scale businesses. He led and was responsible for 10 successful Walmart US Holiday sales." +
         "He has delivered and owned Tier-0 and Tier-1 systems in backend, Data and MLOps, Data Stores and Platforms for time " +
         "sensitive high impact businesses and requirements.",
-    email: "shivprakash@duck.com",
+    email: "shivprakash.in@hotmail.com",
     imageUrl: "https://avatars.githubusercontent.com/u/2737066?v=4",
     githubUsername: "shivprakash",
     linkedinUsername: "shivprakashin",
     twitterUsername: "shivprakash",
     blogUrl: "https://shivprakashin.substack.com",
-    cvUrl: "/docs/resume-shivprakash-engineering.pdf",
+    cvUrl: "/docs/CV-ShivPrakash-pl-online.pdf",
     institutionUrl: "https://www.gatech.edu",
 };
