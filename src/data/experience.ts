@@ -23,8 +23,8 @@ export const experienceData: Experience[] = [
     },
     {
         title: "Software Architect",
-        company: "Walmart Global Tech",
-        companyUrl: "https://www.walmartglobaltech.com/",
+        company: "Walmart",
+        companyUrl: "https://www.walmart.com/",
         date: "August 2019 - December 2022",
         description: `
         - Designed and built Walmart's centralized customer communication platform, handling 500K TPS.
@@ -35,8 +35,8 @@ export const experienceData: Experience[] = [
     },
     {
         title: "Senior Software Development Engineer",
-        company: "Walmart Global Tech",
-        companyUrl: "https://www.walmartglobaltech.com/",
+        company: "Walmart",
+        companyUrl: "https://www.walmart.com/",
         date: "November 2015 - July 2019",
         description: `
         - Developed and optimized Walmart’s demand forecasting platform, increasing throughput by 500%.
@@ -46,8 +46,8 @@ export const experienceData: Experience[] = [
     },
     {
         title: "Software Development Engineer III",
-        company: "Walmart Global Tech",
-        companyUrl: "https://www.walmartglobaltech.com/",
+        company: "Walmart",
+        companyUrl: "https://www.walmart.com/",
         date: "November 2013 - November 2015",
         description: `
         - Built and scaled Walmart’s fulfillment capacity service, supporting distribution center operations.
@@ -58,8 +58,8 @@ export const experienceData: Experience[] = [
     },
     {
         title: "Software Development Engineer II",
-        company: "Walmart Global Tech",
-        companyUrl: "https://www.walmartglobaltech.com/",
+        company: "Walmart",
+        companyUrl: "https://www.walmart.com/",
         date: "October 2012 - November 2013",
         description: `
         - Designed Walmart’s real-time availability engine, processing inventory calculations with 400ms latency.

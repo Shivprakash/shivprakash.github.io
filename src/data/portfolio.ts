@@ -12,7 +12,7 @@ export const portfolioData: Portfolio[] = [
     // {
     //     title: "Inventory Placements",
     //     description: "Determines the optimal inventory placements for Walmart stores & DC to maximize sales and minimize costs.",
-    //     technologies: ["Java", "Python", "Spark", "Airflow", "GCP"],
+    //     technologies: [],
     //     imageUrl: "",
     //     projectUrl: "",
     //     codeUrl: "",
