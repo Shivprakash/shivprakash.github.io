@@ -34,6 +34,6 @@ export const aboutMe: AboutMe = {
     linkedinUsername: "shivprakashin",
     twitterUsername: "shivprakash",
     blogUrl: "https://shivprakashin.substack.com",
-    cvUrl: "/docs/CV-ShivPrakash-pl-online.pdf",
+    cvUrl: "/docs/ShivPrakash-pl-v2.pdf",
     institutionUrl: "https://www.gatech.edu",
 };
