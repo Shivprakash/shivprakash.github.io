@@ -22,7 +22,7 @@ export const experienceData: Experience[] = [
     `,
     },
     {
-        title: "Software Architect",
+        title: "Tech Lead Manager / Software Architect",
         company: "Walmart",
         companyUrl: "https://www.walmart.com/",
         date: "August 2019 - December 2022",
