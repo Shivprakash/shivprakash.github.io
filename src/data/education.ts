@@ -8,14 +8,16 @@ export interface Education {
 }
 
 export const educationData: Education[] = [
-  { year: "",
+  {
+    year: "In Progress",
     institution: "Georgia Institute of Technology",
     degree: "Master of Science (MS) in Machine Learning (In Progress)",
     advisor: "",
     thesis: "",
     thesisUrl: "",
   },
-  { year: "",
+  {
+    year: "",
     institution: "Yeshwantrao Chavan College of Engineering (YCCE)",
     degree: "Bachelor of Engineering in Computer Technology",
     advisor: "",

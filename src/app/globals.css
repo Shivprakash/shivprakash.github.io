@@ -2,26 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─────────────────────────────────────────────────────────────
+   COLOUR PALETTE  ·  Warm Lavender + Earthy Neutrals
+   ───────────────────────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Page surfaces */
+  --background: #FFF4E9;
+  /* Linen        — page base           */
+  --surface: #FFFBF5;
+  /* Off-linen    — card / section bg   */
+  --foreground: #2C2420;
+  /* Warm near-black — primary text      */
+  --text-secondary: #4A443F;
+  /* Body text warm dark                 */
+  --text-muted: #9C9583;
+  /* Grey Olive   — secondary labels     */
+  --text-hint: #A1A499;
+  /* Ash Grey     — hints / metadata     */
+
+  /* Interactive - Earthy Neutrals */
+  --accent: #5C7A58;
+  /* Forest Green — links/highlights */
+  --accent-hover: #759270;
+  /* Soft Olive   — hover state      */
+  --accent-soft: #CADBC8;
+  /* Light Sage   — focus rings      */
+
+  /* Borders & dividers */
+  --divider: #E8DBC5;
+  /* Sand Dune    — borders / hr         */
+  --divider-soft: #E2D4B7;
+  /* Pearl Beige  — subtle rules         */
+
+  /* ── Role Pillar Themes ── */
+  --pillar-engineering-bg: #EEF0F2;
+  /* Light Silver  */
+  --pillar-engineering-border: #B0BBBF;
+  /* Silver        */
+  --pillar-engineering-text: #546267;
+  /* Deep Steel    */
+
+  --pillar-research-bg: #F0EDE6;
+  /* Light Oatmeal */
+  --pillar-research-border: #CBB9A8;
+  /* Clay Sand     */
+  --pillar-research-text: #8B735F;
+  /* Warm Bark     */
+
+  --pillar-analyst-bg: #EFF4EE;
+  /* Light Sage    */
+  --pillar-analyst-border: #CADBC8;
+  /* Sage          */
+  --pillar-analyst-text: #5C7A58;
+  /* Forest Green  */
 }
 
+/* ─────────────────────────────────────────────────────────────
+   FONT FAMILY  ·  Montserrat + Lora + Hind Madurai
+   (Variables injected by Next.js font loader in layout.tsx)
+   ───────────────────────────────────────────────────────────── */
+
+/* Body — Hind Madurai: clean, modern, highly legible */
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--source-serif-font), Georgia, serif;
+  font-family: var(--font-hind-madurai), var(--font-geist-sans), system-ui, sans-serif;
 }
 
-/* Elements marked with serif class or font-serif will use Source Serif */
-.font-serif,
-.serif {
-  font-family: ui-serif, var(--font-pt-serif), var(--font-noto-serif), Georgia,
-    serif;
+/* Headings — Montserrat: geometric, strong, authoritative */
+.font-heading {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
 }
 
-/* Elements marked with sans or font-sans will use Geist */
-.font-sans,
-.sans {
+/* Serif / accent — Lora: humanist serif, excellent italic support */
+.font-serif {
+  font-family: var(--font-lora), Georgia, serif;
+}
+
+/* Sans UI — Geist (kept for code/mono fallback contexts) */
+.font-sans {
   font-family: var(--font-geist-sans), system-ui, sans-serif;
 }

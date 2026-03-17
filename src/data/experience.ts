@@ -1,82 +1,33 @@
 export interface Experience {
-    date: string;
-    title: string;
-    company: string;
-    description?: string;
-    advisor?: string;
-    manager?: string;
-    companyUrl?: string;
+  date: string;
+  title: string;
+  company: string;
+  description?: string;
+  advisor?: string;
+  manager?: string;
+  companyUrl?: string;
 }
 
 export const experienceData: Experience[] = [
-    {
-        title: "Senior Software Engineering Manager",
-        company: "Walmart",
-        companyUrl: "https://www.walmart.com",
-        date: "January 2023 - Present",
-        description: `
-      - Leading the AI-driven inventory placement initiative, projected to save Walmart over $500M.
-      - Managing a team of 9 engineers, driving roadmap and technical execution across multiple geographies.
-      - Implemented cost-reduction strategies, reducing cloud infrastructure costs by 31%.
-      - Spearheaded zero-defect delivery and automation initiatives, improving system reliability.
-    `,
-    },
-    {
-        title: "Tech Lead Manager / Software Architect",
-        company: "Walmart",
-        companyUrl: "https://www.walmart.com/",
-        date: "August 2019 - December 2022",
-        description: `
-        - Designed and built Walmart's centralized customer communication platform, handling 500K TPS.
-        - Improved chatbot automation, reducing customer support contact rates by 32%.
-        - Led the migration of critical systems to a cloud-native architecture, ensuring 99.99% uptime.
-        - Established governance policies for data platforms, achieving SOX, GDPR, and CCPA compliance.
-      `,
-    },
-    {
-        title: "Senior Software Development Engineer",
-        company: "Walmart",
-        companyUrl: "https://www.walmart.com/",
-        date: "November 2015 - July 2019",
-        description: `
-        - Developed and optimized Walmart’s demand forecasting platform, increasing throughput by 500%.
-        - Led ETL pipeline development, processing over 10TB of data weekly for inventory insights.
-        - Contributed to a multi-channel sourcing algorithm, later patented for its impact on order fulfillment.
-      `,
-    },
-    {
-        title: "Software Development Engineer III",
-        company: "Walmart",
-        companyUrl: "https://www.walmart.com/",
-        date: "November 2013 - November 2015",
-        description: `
-        - Built and scaled Walmart’s fulfillment capacity service, supporting distribution center operations.
-        - Developed a virtual inventory ingestion engine handling 22M items, 20K sellers, and 4M updates per hour.
-        - Designed and deployed a global reservation system to optimize order availability across Walmart’s ecosystem.
-        - Enhanced performance for inventory monitoring and analytics, improving reporting efficiency.
-      `,
-    },
-    {
-        title: "Software Development Engineer II",
-        company: "Walmart",
-        companyUrl: "https://www.walmart.com/",
-        date: "October 2012 - November 2013",
-        description: `
-        - Designed Walmart’s real-time availability engine, processing inventory calculations with 400ms latency.
-        - Developed an orchestration layer for microservices, improving service scalability and modularity.
-        - Created an automated inventory ingestion pipeline, supporting millions of transactions daily.
-        - Led migration efforts to cloud-based CI/CD pipelines for improved deployment efficiency.
-      `,
-    },
-    {
-        title: "Senior Programmer",
-        company: "Best Buy (via Accenture)",
-        companyUrl: "https://www.bestbuy.com/",
-        date: "August 2010 - October 2012",
-        description: `
-      - Built and optimized mobile retail enhancements, improving customer experience for Best Buy.
-      - Developed inventory availability and pre-sales order pipelines for mobile and in-store pickup.
-      - Upgraded and migrated legacy fulfillment systems to improve performance and scalability.
-    `,
-    },
+  {
+    title: "Senior Engineering Leader – Data & AI",
+    company: "Red Hat",
+    companyUrl: "https://www.redhat.com",
+    date: "July 2025 - Present",
+    description: "Leading the Data and AI Platform for India, managing a team of 28+ engineers across APAC, NA, and EMEA.<br><br>Driving the <strong>AI acceleration roadmap</strong>, scaling the <strong>Enterprise Data Mesh</strong> platform, and building the next-generation <strong>Agentic AI workforce</strong>.",
+  },
+  {
+    title: "Senior Architect / Senior Software Engineering Manager II",
+    company: "Walmart",
+    companyUrl: "https://www.walmart.com",
+    date: "October 2012 - June 2025",
+    description: "Over a near 13-year tenure, progressed from SDE II to Architect and Senior Software Engineering Manager, leading large geo-distributed teams across some of Walmart's most critical and complex charters.<br><br>Directed the architecture, vision, and scale of massive enterprise initiatives including <strong>Inventory Management Systems</strong>, <strong>Real-Time Availability</strong>, <strong>Demand Forecasting</strong>, <strong>Store Systems Data Platforms</strong>, <strong>Centralized Comms Platform</strong>, and a flagship multi-million dollar <strong>Inventory Optimization System</strong>.<br><br>This trajectory built a deeply rounded profile encompassing the full technical stack—architecting high-scale <strong>Distributed Systems</strong>, modernizing PetaByte-scale <strong>Data architecture</strong>, deploying rigorous supply chain <strong>Optimization Systems</strong>, integrating foundational <strong>Machine Learning (ML)</strong>, <strong>AI</strong>, and pioneering early orchestrations in <strong>Gen AI</strong> to radically elevate global fulfillment capabilities.",
+  },
+  {
+    title: "Programmer - Senior Programmer",
+    company: "Best Buy (via Accenture BBTG)",
+    companyUrl: "https://www.bestbuy.com/",
+    date: "August 2010 - October 2012",
+    description: "Led critical retail system modernizations, including the overarching <strong>Sterling SSFS</strong> enterprise upgrade and the development of a unified <strong>mobile carrier activation platform</strong>.",
+  },
 ];
