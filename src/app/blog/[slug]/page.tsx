@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${post.title} | Shiv Prakash`,
       description: post.description,
     };
-  } catch (e) {
+  } catch {
     return {
       title: "Post Not Found",
     };
@@ -38,7 +38,7 @@ export default async function BlogPostPage({ params }: Props) {
   
   try {
     post = getBlogBySlug(slug);
-  } catch (error) {
+  } catch {
     return (
       <div className="max-w-screen-lg mx-auto px-10 py-28 text-center">
         <h1 className="text-3xl font-bold font-heading text-foreground mb-5">Post not found</h1>

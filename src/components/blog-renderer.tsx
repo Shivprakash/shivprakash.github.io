@@ -1,4 +1,5 @@
 "use client";
+import type { ComponentPropsWithoutRef } from "react";
 
 import { useEffect, useState, useRef } from "react";
 import ReactMarkdown from "react-markdown";
@@ -34,16 +35,16 @@ export default function BlogRenderer({ content }: { content: string }) {
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeRaw]}
         components={{
-          h1: ({node, ...props}) => <h1 className="font-heading text-4xl font-bold mt-10 mb-5 text-foreground" {...props} />,
-          h2: ({node, ...props}) => <h2 className="font-heading text-3xl font-bold mt-10 mb-5 text-foreground border-b border-divider pb-2.5" {...props} />,
-          h3: ({node, ...props}) => <h3 className="font-heading text-2xl font-bold mt-7 mb-3.5 text-foreground" {...props} />,
-          p: ({node, ...props}) => <p className="mb-5 text-muted leading-relaxed" {...props} />,
-          a: ({node, ...props}) => <a className="text-accent hover:text-accent-hover underline" {...props} />,
-          ul: ({node, ...props}) => <ul className="list-disc list-outside pl-7 mb-5 text-muted" {...props} />,
-          ol: ({node, ...props}) => <ol className="list-decimal list-outside pl-7 mb-5 text-muted" {...props} />,
-          li: ({node, ...props}) => <li className="mb-1" {...props} />,
-          blockquote: ({node, ...props}) => <blockquote className="border-l-4 border-accent pl-5 italic text-hint my-7" {...props} />,
-          code({ node, className, children, ...props }: any) {
+          h1: ({...props}) => <h1 className="font-heading text-4xl font-bold mt-10 mb-5 text-foreground" {...props} />,
+          h2: ({...props}) => <h2 className="font-heading text-3xl font-bold mt-10 mb-5 text-foreground border-b border-divider pb-2.5" {...props} />,
+          h3: ({...props}) => <h3 className="font-heading text-2xl font-bold mt-7 mb-3.5 text-foreground" {...props} />,
+          p: ({...props}) => <p className="mb-5 text-muted leading-relaxed" {...props} />,
+          a: ({...props}) => <a className="text-accent hover:text-accent-hover underline" {...props} />,
+          ul: ({...props}) => <ul className="list-disc list-outside pl-7 mb-5 text-muted" {...props} />,
+          ol: ({...props}) => <ol className="list-decimal list-outside pl-7 mb-5 text-muted" {...props} />,
+          li: ({...props}) => <li className="mb-1" {...props} />,
+          blockquote: ({...props}) => <blockquote className="border-l-4 border-accent pl-5 italic text-hint my-7" {...props} />,
+          code({ className, children, ...props }: ComponentPropsWithoutRef<'code'>) {
             const inline = !className || !className.includes('language-');
             const match = /language-(\w+)/.exec(className || "");
             const language = match ? match[1] : "";
