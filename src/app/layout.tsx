@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Noto_Serif, PT_Serif, Montserrat, Lora, Hind_Madurai } from "next/font/google";
 import "./globals.css";
 import { aboutMe } from "@/data/aboutme";
-import { customMetadata } from "@/data/title-description";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

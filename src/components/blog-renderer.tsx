@@ -18,8 +18,8 @@ const MermaidRenderer = ({ chart }: { chart: string }) => {
         const mermaid = (await import('mermaid')).default;
         mermaid.initialize({ startOnLoad: false, theme: "default" });
         // mermaid.render returns { svg: string } in newer versions
-        const result: any = await mermaid.render(id.current, chart);
-        setSvg(typeof result === 'string' ? result : (result?.svg || result));
+        const result = await mermaid.render(id.current, chart);
+        setSvg(typeof result === 'string' ? result : ((result as { svg: string })?.svg || result));
       } catch (err) {
         console.error("Mermaid parsing error", err);
         setError(true);
