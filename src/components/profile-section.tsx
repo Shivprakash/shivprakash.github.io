@@ -7,21 +7,10 @@ import {
   Twitter,
   ArrowUpRight,
   GraduationCap,
-  Cpu,
-  BarChart3,
-  FlaskConical,
-  LucideIcon,
 } from "lucide-react";
 import { AboutMe } from "@/data/aboutme";
-import { rolePillarsData, PillarIconName } from "@/data/profile-pillars";
-
-// Icon registry — maps data iconName strings to lucide components.
-// Icons are a UI concern so this mapping lives in the component, not the data file.
-const iconMap: Record<PillarIconName, LucideIcon> = {
-  Cpu,
-  FlaskConical,
-  BarChart3,
-};
+import { rolePillarsData } from "@/data/profile-pillars";
+import { PillarEntry } from "./pillar-entry";
 
 interface ProfileSectionProps {
   aboutMe: AboutMe;
@@ -70,27 +59,12 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
 
         {/* Role pillars — data-driven from src/data/profile-pillars.ts */}
         <div className="flex flex-col gap-2.5 mb-6">
-          {rolePillarsData.map((pillar) => {
-            const Icon = iconMap[pillar.iconName];
-            return (
-              <div
-                key={pillar.label}
-                className={`group flex items-start gap-3 px-3.5 py-3 rounded-lg border ${pillar.bgClass} ${pillar.borderClass} transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:bg-surface hover:border-accent/50`}
-              >
-                <span className={`mt-0.5 flex-shrink-0 ${pillar.textClass}`}>
-                  <Icon size={16} strokeWidth={2.2} />
-                </span>
-                <div className="min-w-0">
-                  <p className={`text-[14px] font-semibold uppercase tracking-widest leading-none mb-1 ${pillar.textClass}`}>
-                    {pillar.label}
-                  </p>
-                  <p className="text-[13px] leading-snug font-medium tracking-wide font-serif italic text-muted">
-                    {pillar.sub}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
+          {rolePillarsData.map((pillar) => (
+            <PillarEntry
+              key={pillar.label}
+              pillar={pillar}
+            />
+          ))}
         </div>
 
         {/* Notebook / CV / Blog quick links */}

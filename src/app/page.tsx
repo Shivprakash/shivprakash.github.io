@@ -145,7 +145,7 @@ export default function Home() {
                         <h2 className="font-heading font-bold text-lg text-foreground mb-14 tracking-wide uppercase">
                           Experience
                         </h2>
-                        <div className="space-y-12">
+                        <div className="space-y-8">
                           {experienceData.map((experience, index) => (
                             <ExperienceEntry
                               key={index}

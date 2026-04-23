@@ -1,0 +1,34 @@
+
+> research-website-template@0.1.0 build
+> next build
+
+   ▲ Next.js 15.5.13
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 5.7s
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/7) ...
+   Generating static pages (1/7) 
+   Generating static pages (3/7) 
+   Generating static pages (5/7) 
+ ✓ Generating static pages (7/7)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS
+┌ ○ /                                    8.73 kB         115 kB
+├ ○ /_not-found                             1 kB         104 kB
+├ ○ /blog                                1.65 kB         108 kB
+├ ● /blog/[slug]                          251 kB         357 kB
+├   └ /blog/hello-world
+└ ○ /icon.png                                0 B            0 B
++ First Load JS shared by all             103 kB
+  ├ chunks/1255-c32318a942e40e3e.js      45.8 kB
+  ├ chunks/4bd1b696-100b9d70ed4e49c1.js  54.2 kB
+  └ other shared chunks (total)          2.79 kB
+
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+
