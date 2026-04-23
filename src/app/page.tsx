@@ -15,6 +15,13 @@ import { skillsData } from "@/data/skills";
 import { ServicesEntry } from "@/components/services-entry";
 import { servicesData } from "@/data/services";
 import { sectionOrder, Section } from "@/data/section-order";
+import { Metadata } from "next";
+import { customMetadata } from "@/data/title-description";
+
+export const metadata: Metadata = {
+  title: customMetadata.title || aboutMe.name,
+  description: customMetadata.description || aboutMe.description,
+};
 
 export default function Home() {
   return (
