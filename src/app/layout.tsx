@@ -45,11 +45,88 @@ const hindMadurai = Hind_Madurai({
   weight: ["300", "400", "500", "600"],
 });
 
+// SEO and OpenGraph metadata
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://shivprakash.github.io";
+const seoDescription = "Engineering Leader & Architect - Distributed Systems, Data Engineering, AI, Agentic AI, Machine Learning. Graduate Researcher in ML, Algorithms, HCI/AI, Robotics, Network Science, DL, RL, NLP. Industry Analyst covering Supply Chain, Data Center, Financial Research, VC.";
+
 export const metadata: Metadata = {
-  title: customMetadata.title || aboutMe.name,
-  description: customMetadata.description || aboutMe.description,
+  title: {
+    default: "Shiv Prakash | Engineering Leader & Architect",
+    template: "%s | Shiv Prakash",
+  },
+  description: seoDescription,
+  keywords: [
+    "Engineering Leader",
+    "Software Architect",
+    "Distributed Systems",
+    "Data Engineering",
+    "AI",
+    "Agentic AI",
+    "Machine Learning",
+    "Graduate Researcher",
+    "Georgia Tech",
+    "Supply Chain",
+    "Data Center",
+    "Financial Research",
+    "Venture Capital",
+    "Cloud-Native Infrastructure",
+    "Data Mesh",
+    "Autonomous Systems",
+  ],
+  authors: [{ name: "Shiv Prakash", url: siteUrl }],
+  creator: "Shiv Prakash",
+  metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteUrl,
+    title: "Shiv Prakash | Engineering Leader & Architect",
+    description: seoDescription,
+    siteName: "Shiv Prakash",
+    images: [
+      {
+        url: "https://avatars.githubusercontent.com/u/2737066?v=4",
+        width: 1200,
+        height: 630,
+        alt: "Shiv Prakash - Engineering Leader & Architect",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shiv Prakash | Engineering Leader & Architect",
+    description: seoDescription,
+    site: "@shivprakash",
+    creator: "@shivprakash",
+    images: [
+      {
+        url: "https://avatars.githubusercontent.com/u/2737066?v=4",
+        alt: "Shiv Prakash - Engineering Leader & Architect",
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
-    icon: "/icon.png",
+    icon: [
+      { url: "/icon.png", sizes: "1024x1024", type: "image/png" },
+    ],
+    shortcut: "/icon.png",
+    apple: [
+      { url: "/icon.png", sizes: "1024x1024", type: "image/png" },
+    ],
   },
 };
 

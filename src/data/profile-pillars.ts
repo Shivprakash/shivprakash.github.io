@@ -18,7 +18,7 @@ export const rolePillarsData: RolePillar[] = [
   {
     iconName: "Cpu",
     label: "Engineering Leader & Architect",
-    sub: "Distributed Systems · Data · AI/ML",
+    sub: "Distributed Systems · Data · AI/ML · Agentic AI",
     bgClass: "bg-pillar-engineering-bg",
     borderClass: "border-pillar-engineering-border",
     textClass: "text-pillar-engineering",
@@ -26,7 +26,7 @@ export const rolePillarsData: RolePillar[] = [
   {
     iconName: "FlaskConical",
     label: "Graduate Researcher",
-    sub: "Georgia Tech · ML · DL · RL · NLP · CV · Robotics · NSc · Quantum Engg · Algorithms",
+    sub: "Georgia Tech · ML · DL · RL · NLP · CV · Robotics · Network Science · Quantum Engg · Algorithms · Human Computer/AI Interaction",
     bgClass: "bg-pillar-research-bg",
     borderClass: "border-pillar-research-border",
     textClass: "text-pillar-research",

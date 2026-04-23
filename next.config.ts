@@ -1,6 +1,8 @@
 import type {NextConfig} from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
+    outputFileTracingRoot: path.join(__dirname),
     images: {
         remotePatterns: [
             {
@@ -12,6 +14,14 @@ const nextConfig: NextConfig = {
                 hostname: "avatars.githubusercontent.com",
             }
         ]
+    },
+    webpack: (config) => {
+        // Ignore cytoscape to prevent build errors
+        config.resolve.alias = {
+            ...config.resolve.alias,
+            'cytoscape': false,
+        };
+        return config;
     },
 };
 

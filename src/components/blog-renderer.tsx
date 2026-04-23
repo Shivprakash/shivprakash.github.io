@@ -5,25 +5,36 @@ import { useEffect, useState, useRef } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
-import mermaid from "mermaid";
 
+// Dynamic import for mermaid to avoid build issues
 const MermaidRenderer = ({ chart }: { chart: string }) => {
   const [svg, setSvg] = useState<string>("");
+  const [error, setError] = useState<boolean>(false);
   const id = useRef(`mermaid-${Math.random().toString(36).substr(2, 9)}`);
 
   useEffect(() => {
-    mermaid.initialize({ startOnLoad: false, theme: "default" });
     const renderChart = async () => {
       try {
-        const { svg: renderedSvg } = await mermaid.render(id.current, chart);
-        setSvg(renderedSvg);
-      } catch (error) {
-        console.error("Mermaid parsing error", error);
-        setSvg(`<div class="text-red-500 bg-red-50 p-5 border border-red-200">Error rendering Mermaid chart</div>`);
+        const mermaid = (await import('mermaid')).default;
+        mermaid.initialize({ startOnLoad: false, theme: "default" });
+        // mermaid.render returns { svg: string } in newer versions
+        const result: any = await mermaid.render(id.current, chart);
+        setSvg(typeof result === 'string' ? result : (result?.svg || result));
+      } catch (err) {
+        console.error("Mermaid parsing error", err);
+        setError(true);
       }
     };
     renderChart();
   }, [chart]);
+
+  if (error) {
+    return (
+      <div className="text-red-500 bg-red-50 p-5 border border-red-200 my-5 rounded">
+        Mermaid chart could not be rendered
+      </div>
+    );
+  }
 
   return <div className="flex justify-center my-10 w-full overflow-x-auto" dangerouslySetInnerHTML={{ __html: svg }} />;
 };
@@ -48,7 +59,7 @@ export default function BlogRenderer({ content }: { content: string }) {
             const inline = !className || !className.includes('language-');
             const match = /language-(\w+)/.exec(className || "");
             const language = match ? match[1] : "";
-            
+
             if (!inline && language === "mermaid") {
               return <MermaidRenderer chart={String(children).replace(/\n$/, "")} />;
             }
