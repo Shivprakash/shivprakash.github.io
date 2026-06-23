@@ -152,17 +152,6 @@ export default function RootLayout({
                 </p>
               )}
             </div>
-            <div className="mb-5">
-              <p className="text-base text-neutral-500 dark:text-neutral-500 justify">
-                Built with{" "}
-                <a
-                  href="https://github.com/tovacinni/research-website-template"
-                  className="underline hover:text-neutral-800 dark:hover:text-neutral-300 transition-colors"
-                >
-                  research-website-template
-                </a>
-              </p>
-            </div>
           </div>
         </footer>
       </body>

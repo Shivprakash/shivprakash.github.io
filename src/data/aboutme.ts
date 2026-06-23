@@ -18,6 +18,7 @@ export interface AboutMe {
     altName?: string;
     institutionUrl?: string;
     notesUrl?: string;
+    researchUrl?: string;
 }
 
 export const aboutMe: AboutMe = {
@@ -47,5 +48,6 @@ export const aboutMe: AboutMe = {
     blogUrl: "https://shivprakashin.substack.com/welcome",
     cvUrl: "/docs/CV-ShivPrakash-Online.pdf",
     notesUrl: "/blog",
+    researchUrl: "https://research.shiv.io/",
     institutionUrl: "https://omscs.gatech.edu",
 };

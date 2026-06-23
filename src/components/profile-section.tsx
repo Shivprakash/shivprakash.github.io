@@ -67,8 +67,8 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
           ))}
         </div>
 
-        {/* Notebook / CV / Blog quick links */}
-        {(aboutMe.notesUrl || aboutMe.cvUrl || aboutMe.blogUrl) && (
+        {/* Notebook / CV / Blog / Research quick links */}
+        {(aboutMe.notesUrl || aboutMe.cvUrl || aboutMe.blogUrl || aboutMe.researchUrl) && (
           <div className="flex gap-5 mb-6">
             {aboutMe.notesUrl && (
               <Link
@@ -108,6 +108,20 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
                   className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
                 />
                 Blog
+              </a>
+            )}
+            {aboutMe.researchUrl && (
+              <a
+                href={aboutMe.researchUrl}
+                className="group inline-flex items-center gap-2 text-[14px] font-semibold text-muted hover:text-foreground transition-colors duration-300 uppercase tracking-widest"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ArrowUpRight
+                  size={14}
+                  className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
+                />
+                Research
               </a>
             )}
           </div>
