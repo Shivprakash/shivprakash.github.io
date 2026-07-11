@@ -36,6 +36,9 @@ export const aboutMe: AboutMe = {
         "for millions of users, I bring hands-on expertise across the full stack - from Machine Learning, Distributed Systems, Data Engineering to " +
         "Cloud-Native Infrastructure and Engineering Leadership. " +
         "<br><br>" +
+        "Beyond enterprise work, I actively design and build <strong>agentic AI products</strong> of my own — spanning " +
+        "consumer fintech, enterprise workflow automation, and applied research. " +
+        "<br><br>" +
         "Open to <strong>Consulting engagements</strong>, <strong>Technical collaboration</strong>, <strong>Mentorship</strong>, and " +
         "<strong>Volunteer work</strong> with non-profits. " +
         "<br><br>" +
