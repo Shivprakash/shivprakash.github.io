@@ -123,7 +123,7 @@ export default function Home() {
                     publicationData.length > 0 && (
                       <section key={sectionName}>
                         <h2 className="font-heading font-bold text-lg text-foreground mb-14 tracking-wide uppercase">
-                          Patents
+                          Patents &amp; Publications
                         </h2>
                         <div className="space-y-12">
                           {publicationData.map((publication, index) => (

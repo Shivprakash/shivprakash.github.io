@@ -15,13 +15,18 @@ export const portfolioData: Portfolio[] = [
     },
     {
         title: "Agentic Platform (Dataverse) & Digital Workforce",
-        description: "Production multi-agent system powering a digital workforce across analytics, governance, reliability, and compliance.<br><br>• <strong>Dataverse Agent</strong>: NL-to-SQL, cutting analytics workload by <strong>80%</strong>.<br>• <strong>Platform Review Agent</strong>: Automated governance, <strong>30% cost reduction</strong>.<br>• <strong>Metadata Enrichment Agent</strong>: Fine-tuned PHI-3 model.<br>• <strong>DSR / GDPR Agent</strong>: Orchestrated scatter-gather for data-subject requests with full audit trail.<br>• <strong>SRE Agent</strong>: Dual knowledge-synthesis + worker agent — negotiated permissions, auto-remediated incidents, <strong>45% MTTR reduction</strong>, <strong>99.995% uptime</strong>.",
-        technologies: ["Multi-Agent Systems", "NL-to-SQL", "PHI-3", "OPA", "Governance Automation", "LLM Ops"],
+        description: "Production multi-agent system powering a digital workforce across analytics, governance, reliability, and compliance.<br><br>• <strong>Dataverse Agent</strong>: NL-to-SQL, cutting analytics workload by <strong>80%</strong>.<br>• <strong>Platform Review Agent</strong>: Automated governance, <strong>30% cost reduction</strong>.<br>• <strong>Metadata Enrichment Agent</strong>: Fine-tuned PHI-3 model with <strong>DeepEval / RAGAS</strong> evaluation pipelines.<br>• <strong>DSR / GDPR Agent</strong>: Orchestrated scatter-gather for data-subject requests with full audit trail.<br>• <strong>SRE Agent</strong>: Dual knowledge-synthesis + worker agent — negotiated permissions, auto-remediated incidents, <strong>45% MTTR reduction</strong>, <strong>99.995% uptime</strong>.",
+        technologies: ["Multi-Agent Systems", "NL-to-SQL", "PHI-3", "DeepEval / RAGAS", "OPA", "Governance Automation", "LLM Ops"],
     },
     {
         title: "Agentic Sandbox / Harness",
         description: "Simulation harness that models humans, departments, and permissions to generate governed agentic clones — enabling safe agent development and policy testing.<br><br>• <strong>SRE agent pilot</strong>: Automated ticket resolution, peak-load scaling, onboarding validation, and self-improving knowledge base.<br>• <strong>Policy-Based Access</strong>: Dynamic attribute-based access control via OPA across micro-services.<br>• <strong>Ephemeral compute</strong>: Spawns research environments on-demand and destroys them post-session.",
         technologies: ["Policy Engine", "OPA", "Zero Trust", "Agentic Simulation", "Node.js"],
+    },
+    {
+        title: "Production ML Modeling & MLOps",
+        description: "Built and <strong>personally owned production ML models end-to-end</strong> — not just the platforms around them.<br><br>• <strong>Demand-forecasting models</strong>: STL, ARIMA, and MHRNN powering next-gen inventory planning.<br>• <strong>Return-fraud model</strong>: trained, scored, and served in production for Care &amp; Returns.<br>• <strong>Full MLOps lifecycle</strong>: training, scoring, versioning, inference, and post-processing.<br>• Tooling: <strong>MLFlow</strong> for experiment tracking &amp; versioning, <strong>KServe</strong> for model serving.<br>• Lifted new-item forecast accuracy by up to <strong>35%</strong> across categories.",
+        technologies: ["STL / ARIMA / MHRNN", "Fraud Modeling", "MLFlow", "KServe", "MLOps", "Time-Series Forecasting"],
     },
     {
         title: "AI Acceleration & Developer Productivity",
@@ -50,8 +55,8 @@ export const portfolioData: Portfolio[] = [
     },
     {
         title: "Centralized Communications Platform",
-        description: "Cross-functional platform bridging UX, Data, and QA — fully compliant with <strong>GDPR, POPIA, and CCPA</strong>.<br><br>• Reduced operational costs by <strong>21.2%</strong>.<br>• Improved CSAT scores by <strong>33.8%</strong> via an enhanced in-house conversational chatbot.",
-        technologies: ["Big Data", "Conversational APIs", "Chatbot", "GDPR/CCPA"],
+        description: "Customer-facing communications, chatbot, and self-service platform scaling to <strong>500K TPS</strong> across <strong>5 global markets</strong> (UK, South Africa, Canada, Mexico, Chile) — fully compliant with <strong>GDPR, POPIA, and CCPA</strong>.<br><br>• Cut contact rate by <strong>32%</strong> via an enhanced in-house conversational chatbot.<br>• Improved CSAT scores by <strong>33.8%</strong>.<br>• Reduced operational costs by <strong>21.2%</strong>.",
+        technologies: ["500K TPS", "Conversational AI", "Self-Service", "Big Data", "GDPR / POPIA / CCPA"],
     },
     {
         title: "US Walmart Stores Data Platform",

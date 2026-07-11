@@ -31,6 +31,7 @@ export const aboutMe: AboutMe = {
 
     description:
         "I have built Autonomous Agentic AI platforms, Data Mesh architectures, and Distributed systems that transform enterprise operations at scale. " +
+        "I led a Data Mesh &amp; Agentic AI platform serving <strong>200+ data products</strong> and <strong>20K users</strong>, delivering <strong>6 autonomous agents</strong> (3 in production, 3 in beta). " +
         "With proven delivery of <strong>$75M+ in savings</strong> through AI-driven optimization, PetaBytes scale data platforms and systems handling <strong>500K+ TPS</strong> " +
         "for millions of users, I bring hands-on expertise across the full stack - from Machine Learning, Distributed Systems, Data Engineering to " +
         "Cloud-Native Infrastructure and Engineering Leadership. " +
