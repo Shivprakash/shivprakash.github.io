@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Noto_Serif, PT_Serif, Montserrat, Lora, Hind_Madurai } from "next/font/google";
 import "./globals.css";
 import { aboutMe } from "@/data/aboutme";
+import { SiteHeader } from "@/components/site-header";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -139,6 +140,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${notoSerif.variable} ${ptSerif.variable} ${montserrat.variable} ${lora.variable} ${hindMadurai.variable} antialiased`}
       >
+        <SiteHeader />
         <main className="">{children}</main>
         <footer className="border-t border-divider bg-surface">
           <div className="flex flex-row mx-auto max-w-full px-12 px-7 py-14 md:flex md:items-start md:justify-between ">
