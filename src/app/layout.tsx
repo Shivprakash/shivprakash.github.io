@@ -46,7 +46,7 @@ const hindMadurai = Hind_Madurai({
 });
 
 // SEO and OpenGraph metadata
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://shivprakash.github.io";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://profile.shiv.io";
 const seoDescription = "Engineering Leader & Architect - Distributed Systems, Data Engineering, AI, Agentic AI, Machine Learning. Graduate Researcher in ML, Algorithms, HCI/AI, Robotics, Network Science, DL, RL, NLP. Industry Analyst covering Supply Chain, Data Center, Financial Research, VC.";
 
 export const metadata: Metadata = {

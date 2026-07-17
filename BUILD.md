@@ -28,10 +28,20 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ### Build for production
 
 ```bash
-run build
-``` 
+npm run build
+```
 
-### Run the production server
+Static files are written to `./out` (Next.js `output: 'export'`).
+
+### Deploy to Cloudflare (`profile` Worker)
+
+```bash
+npm run deploy
+```
+
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for custom domains (`profile.shiv.io`, `shivprakash.in`).
+
+### Run the production server (local Node)
 
 ```bash         
 npm run start

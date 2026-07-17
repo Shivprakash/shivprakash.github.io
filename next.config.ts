@@ -2,9 +2,8 @@ import type {NextConfig} from "next";
 import path from "path";
 
 const nextConfig: NextConfig = {
-    // Required for GitHub Pages static export
+    // Static export for Cloudflare Workers Static Assets (profile.shiv.io)
     output: 'export',
-    // GitHub Pages repo name will be the base path
     basePath: process.env.NODE_ENV === 'production' ? '' : '',
     assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
     outputFileTracingRoot: path.join(__dirname),

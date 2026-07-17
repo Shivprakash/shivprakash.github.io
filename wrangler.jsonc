@@ -1,0 +1,35 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+
+  // Static portfolio site — Workers Static Assets (same pattern as research/rachna)
+  "name": "profile",
+  "compatibility_date": "2026-07-17",
+  "workers_dev": true,
+  "preview_urls": true,
+
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+
+  // Next.js static export output (`npm run build` → ./out)
+  "assets": {
+    "directory": "./out",
+    // Multi-page static export: serve nearest 404.html when present
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  },
+
+  // Custom domains (zone must exist on this Cloudflare account)
+  // - profile.shiv.io  → live on shiv.io zone
+  // - shivprakash.in   → currently at GoDaddy (ns07/ns08.domaincontrol.com).
+  //   Add the zone in Cloudflare Dashboard, switch nameservers, then add:
+  //   { "pattern": "shivprakash.in", "custom_domain": true }
+  //   { "pattern": "www.shivprakash.in", "custom_domain": true }
+  "routes": [
+    {
+      "pattern": "profile.shiv.io",
+      "custom_domain": true
+    }
+  ]
+}
