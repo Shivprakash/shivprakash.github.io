@@ -13,7 +13,7 @@ export const experienceData: Experience[] = [
     title: "Senior Engineering Leader – Data & AI",
     company: "Red Hat",
     companyUrl: "https://www.redhat.com",
-    date: "July 2025 - Present",
+    date: "July 2025 - March 2026",
     description: "Leading the Data and AI Platform for India, managing a team of 28+ engineers across APAC, NA, and EMEA.<br><br>Driving the <strong>AI acceleration roadmap</strong>, scaling the <strong>Enterprise Data Mesh</strong> platform, and building the next-generation <strong>Agentic AI workforce</strong>.",
   },
   {
