@@ -2,6 +2,14 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
 
   // Static portfolio site — Workers Static Assets (same pattern as research/rachna)
+  //
+  // CI/CD (push to main → live refresh):
+  //   GitHub Actions: .github/workflows/deploy.yml
+  //     Secret: CLOUDFLARE_API_TOKEN (Edit Cloudflare Workers)
+  //   Optional: Cloudflare Workers Builds (dashboard → profile → Settings → Builds)
+  //     Build: npm run build
+  //     Deploy: npx wrangler deploy
+  //     Build env: NEXT_PUBLIC_SITE_URL=https://profile.shiv.io
   "name": "profile",
   "compatibility_date": "2026-07-17",
   "workers_dev": true,

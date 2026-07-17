@@ -27,6 +27,41 @@ npx wrangler dev     # serve built assets via Workers runtime (after build)
 
 ## Deploy
 
+### Automatic (push to `main`)
+
+GitHub Actions workflow: [`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml)
+
+On every push to `main` (and manual **workflow_dispatch**):
+
+1. `npm ci`
+2. `npm run build` (`NEXT_PUBLIC_SITE_URL=https://profile.shiv.io`)
+3. `wrangler deploy` → Worker **`profile`**
+
+**One-time secret setup** (required for Actions):
+
+1. Cloudflare → [Create API token](https://dash.cloudflare.com/profile/api-tokens) → template **Edit Cloudflare Workers** (scope to this account)
+2. GitHub repo → Settings → Secrets and variables → Actions → New repository secret:
+   - Name: `CLOUDFLARE_API_TOKEN`
+   - Value: the token
+
+```bash
+# or via CLI:
+gh secret set CLOUDFLARE_API_TOKEN -R Shivprakash/shivprakash.github.io
+# paste token when prompted
+```
+
+**Optional alternative — Cloudflare Workers Builds** (no GitHub secret; same as `research`):
+
+1. [Workers dashboard → `profile` → Settings → Builds → Connect](https://dash.cloudflare.com/552b3fc9d685bef17e3a479ae1dfd41c/workers/services/view/profile/settings)
+2. Connect `Shivprakash/shivprakash.github.io`, branch `main`
+3. Build command: `npm run build`
+4. Deploy command: `npx wrangler deploy`
+5. Build env: `NEXT_PUBLIC_SITE_URL=https://profile.shiv.io`
+
+If both Actions and Workers Builds are enabled, disable one to avoid double deploys.
+
+### Manual
+
 ```bash
 npm run deploy       # build + wrangler deploy
 # or
